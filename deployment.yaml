@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-site
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-site
+  template:
+    metadata:
+      labels:
+        app: hello-site
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: content
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: content
+        configMap:
+          name: hello-site-content
