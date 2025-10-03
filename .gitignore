@@ -1,0 +1,24 @@
+# Hemkatalog och användarfiler
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.viminfo
+.lesshst
+.wget-hsts
+.sudo_as_admin_successful
+
+# Mappar
+.cache/
+.config/
+.ssh/
+.snap/
+.kube/
+
+# VSCode och editorer
+.vscode/
+.idea/
+
+# OS filer
+Thumbs.db
+.DS_Store
