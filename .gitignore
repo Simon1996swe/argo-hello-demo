@@ -22,3 +22,8 @@
 # OS filer
 Thumbs.db
 .DS_Store
+
+.git-credentials
+.gitconfig
+snap/
+

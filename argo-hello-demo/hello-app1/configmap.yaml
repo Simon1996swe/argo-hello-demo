@@ -1,0 +1,105 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-html-app1
+  labels:
+    app: hello-app1
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="sv">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Kubernetes + ArgoCD + GitOps</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background: linear-gradient(135deg, #0d47a1, #1976d2);
+          color: #fff;
+          text-align: center;
+        }
+        header {
+          padding: 40px 20px;
+          animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+          font-size: 3em;
+          margin-bottom: 10px;
+          text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        }
+        p {
+          font-size: 1.2em;
+          opacity: 0.9;
+        }
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 40px 20px;
+          gap: 20px;
+        }
+        .card {
+          background: rgba(255,255,255,0.1);
+          padding: 20px;
+          border-radius: 12px;
+          width: 250px;
+          transition: transform 0.3s;
+        }
+        .card:hover {
+          transform: scale(1.05);
+          background: rgba(255,255,255,0.2);
+        }
+        .icon {
+          font-size: 50px;
+          margin-bottom: 15px;
+          animation: pulse 2s infinite;
+        }
+        footer {
+          margin-top: 50px;
+          padding: 20px;
+          font-size: 0.9em;
+          background: rgba(0,0,0,0.3);
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50%      { transform: scale(1.2); }
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <h1>🚀 Kubernetes + ArgoCD</h1>
+        <p>GitOps för en modern DevOps-värld</p>
+      </header>
+
+      <section class="cards">
+        <div class="card">
+          <div class="icon">☸️</div>
+          <h2>Kubernetes</h2>
+          <p>Automatiserad containerorkestrering för skalbara applikationer.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎯</div>
+          <h2>ArgoCD</h2>
+          <p>Kontinuerlig leverans för Kubernetes, driven av Git.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌱</div>
+          <h2>GitOps</h2>
+          <p>All infrastruktur och applikationer styrs via Git-repos.</p>
+        </div>
+      </section>
+
+      <footer>
+        Byggt med ❤️ för DevOps • Demo index.html
+      </footer>
+    </body>
+    </html>
